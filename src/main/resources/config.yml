@@ -1,0 +1,35 @@
+##RandomSpawnpoint Config
+
+#Max distance the player can be spawned from the origin. Must be a positive integer.
+SpawnDistance: 5000
+
+#Materials the plugin will attempt to spawn the player on (case-insensitive).
+#The plugin will always spawn the player on a solid block, non-solid blocks will be ignored.
+#Leave this list empty to spawn the player on any solid block
+SpawnableBlocks:
+  - ACACIA_LEAVES
+  - ANDESITE
+  - BIRCH_LEAVES
+  - BLUE_ICE
+  - CLAY
+  - COARSE_DIRT
+  - COBBLESTONE
+  - DARK_OAK_LEAVES
+  - DIORITE
+  - DIRT
+  - GRANITE
+  - GRASS_BLOCK
+  - GRASS_PATH
+  - GRAVEL
+  - ICE
+  - JUNGLE_LEAVES
+  - MYCELIUM
+  - OAK_LEAVES
+  - OBSIDIAN
+  - PACKED_ICE
+  - PODZOL
+  - RED_SAND
+  - SAND
+  - SNOW
+  - SNOW_BLOCK
+  - SPRUCE_LEAVES
