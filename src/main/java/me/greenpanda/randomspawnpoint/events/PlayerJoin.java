@@ -22,7 +22,14 @@ public class PlayerJoin implements Listener {
 
     //If the player hasn't played before, set their spawn point
     if (!player.hasPlayedBefore()) {
-      SetSpawnUtility.SetRandomPlayerSpawn(player);
+      var spawnLoc = SetSpawnUtility.SetRandomPlayerSpawn(player);
+
+      if (spawnLoc == null){
+        System.out.println("Unable to find a spawn location for " + player.getName());
+        return;
+      }
+
+      player.teleport(spawnLoc);
     }
   }
 
