@@ -37,6 +37,7 @@ public class SetRandomSpawnpoint implements CommandExecutor {
       player.sendMessage("Unable to find a suitable spawn location");
       return true;
     }
+
     player.sendMessage(
         "Set your spawn point to " + spawnLoc.getBlockX() + ", " + spawnLoc.getBlockY() + ", "
             + spawnLoc.getBlockX() + ".");

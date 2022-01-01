@@ -33,7 +33,7 @@ public final class RandomSpawnpoint extends JavaPlugin {
     plugin = this;
 
     //Config
-    getConfig().options().copyDefaults();
+    getConfig().options().copyDefaults(true);
     saveDefaultConfig();
 
     //Register Events

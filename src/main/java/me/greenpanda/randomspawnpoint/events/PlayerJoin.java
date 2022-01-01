@@ -1,9 +1,6 @@
 package me.greenpanda.randomspawnpoint.events;
 
-import me.greenpanda.randomspawnpoint.RandomSpawnpoint;
 import me.greenpanda.randomspawnpoint.SetSpawnUtility;
-import org.bukkit.Utility;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
