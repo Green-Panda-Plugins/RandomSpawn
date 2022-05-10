@@ -10,10 +10,6 @@ import org.bukkit.entity.Player;
 
 public class GetSpawnUtility {
 
-  /**
-   * Search directions for getSafeSpawnAroundBlock()
-   * @see BlockFace
-   */
   private static final Set<BlockFace> SEARCH_DIRECTIONS = EnumSet.noneOf(BlockFace.class);
 
   static {
@@ -86,7 +82,7 @@ public class GetSpawnUtility {
     for (BlockFace face : SEARCH_DIRECTIONS) {
       final Location faceLocation = location.getBlock().getRelative(face).getLocation();
 
-      if (isSafeLocation(faceLocation)) {
+      if (isSafeBedLocation(faceLocation)) {
         return faceLocation.add(.5, 0, .5);
       }
     }
@@ -101,7 +97,7 @@ public class GetSpawnUtility {
    * @param location location to search
    * @return true if the location is safe
    */
-  private static boolean isSafeLocation(Location location){
+  private static boolean isSafeBedLocation(Location location){
     if (location == null){
       return false;
     }

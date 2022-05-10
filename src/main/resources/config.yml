@@ -13,3 +13,6 @@ BlockBlacklist:
   - SWEET_BERRY_BUSH
   - CAMPFIRE
   - SOUL_CAMPFIRE
+
+#Sets the player's compass location to their individual World Spawn
+SetPlayerCompassLocation: true

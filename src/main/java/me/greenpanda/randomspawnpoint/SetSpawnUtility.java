@@ -25,6 +25,7 @@ public class SetSpawnUtility {
   //Config
   private static final @NotNull FileConfiguration config = RandomSpawnpoint.getPlugin().getConfig();
   private static final int spawnableRadius = config.getInt("SpawnDistance");
+  private static final boolean setPlayerCompassLoc = config.getBoolean("SetPlayerCompassLocation");
 
   private static final List<String> blacklistString = config.getStringList("BlockBlacklist");
   private static final HashSet<Material> blockBlacklist = new HashSet<>();
@@ -52,6 +53,10 @@ public class SetSpawnUtility {
 
     //Set the player's spawn location
     player.setBedSpawnLocation(spawnLocation, true);
+
+    if (setPlayerCompassLoc){
+      player.setCompassTarget(spawnLocation);
+    }
 
     //Store the world spawn in the player's NBT
     var data = player.getPersistentDataContainer();
