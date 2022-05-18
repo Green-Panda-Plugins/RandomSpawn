@@ -45,11 +45,10 @@ public class PlayerRespawn implements Listener {
     }
 
     /*
-    * Since they are not spawning at a bed or respawn anchor, set the respawn location to the player's
+    * Since they are not spawning at a bed or respawn anchor, set the respawn location the player's
     * world spawn
     */
     var playerWorldSpawn = getPlayerWorldSpawn(player);
-    player.setBedSpawnLocation(playerWorldSpawn, true);
     event.setRespawnLocation(playerWorldSpawn);
   }
 
