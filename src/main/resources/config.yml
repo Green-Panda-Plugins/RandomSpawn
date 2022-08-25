@@ -1,9 +1,9 @@
-##RandomSpawnpoint Config
+## RandomSpawnpoint Config
 
-#Max distance the player can be spawned from the origin. Must be a positive integer.
+# Maximum distance the player can be spawned from the origin. Must be a positive integer.
 SpawnDistance: 5000
 
-#Don't spawn the player on or in these blocks
+# Don't spawn the player on or in these blocks
 BlockBlacklist:
   - LAVA
   - FIRE
@@ -14,5 +14,5 @@ BlockBlacklist:
   - CAMPFIRE
   - SOUL_CAMPFIRE
 
-#Sets the player's compass location to their individual World Spawn
+# Sets the player's compass location to their unique world spawn.
 SetPlayerCompassLocation: true

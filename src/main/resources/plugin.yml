@@ -1,10 +1,14 @@
 name: RandomSpawnpoint
 version: '${project.version}'
-main: me.greenpanda.randomspawnpoint.RandomSpawnpoint
-api-version: 1.18
-description: When players spawn in the world, there spawnpoint will be a random place within a configurable distance.
+main: dev.michaud.greenpanda.randomspawnpoint.RandomSpawnpoint
+api-version: 1.19
+authors: [ PandaDev ]
+description: When players spawn the first time, their spawnpoint will be random.
 commands:
   setrandomspawnpoint:
-    description: Sets your spawn point to a random location.
-    aliases:
-      - rspawnpoint
+    description: Sets your spawnpoint to a random location.
+    permission: randomspawnpoint.setspawn
+permissions:
+  randomspawnpoint.setspawn:
+    description: Lets you set your spawnpoint to a random location.
+    default: op
