@@ -16,15 +16,8 @@ public class PlayerRespawn implements Listener {
   public void onPlayerRespawn(PlayerRespawnEvent event) {
 
     Player player = event.getPlayer();
-    /*Location location = event.getRespawnLocation();*/
 
-    if (event.isBedSpawn()) {
-      /*player.sendMessage(Component.text("Spawned in bed").color(NamedTextColor.AQUA));*/
-      return;
-    }
-
-    if (event.isAnchorSpawn()) {
-      /*player.sendMessage(Component.text("Spawned at anchor").color(NamedTextColor.AQUA));*/
+    if (event.isBedSpawn() || event.isAnchorSpawn()) {
       return;
     }
 

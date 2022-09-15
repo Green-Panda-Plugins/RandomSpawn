@@ -1,9 +1,12 @@
 package dev.michaud.greenpanda.randomspawnpoint;
 
+import dev.michaud.greenpanda.randomspawnpoint.async.LocationCache;
+import dev.michaud.greenpanda.randomspawnpoint.commands.AsyncTest;
 import dev.michaud.greenpanda.randomspawnpoint.commands.SetRandomSpawnpoint;
 import dev.michaud.greenpanda.randomspawnpoint.events.PlayerJoin;
 import dev.michaud.greenpanda.randomspawnpoint.events.PlayerRespawn;
 import dev.michaud.greenpanda.randomspawnpoint.util.ServerProperties;
+import io.papermc.lib.PaperLib;
 import java.util.HashSet;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -42,8 +45,13 @@ public final class RandomSpawnpoint extends JavaPlugin {
     getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
 
     getCommand("setrandomspawnpoint").setExecutor(new SetRandomSpawnpoint());
+    getCommand("asynctest").setExecutor(new AsyncTest());
 
     loadConfig();
+
+    PaperLib.suggestPaper(plugin);
+
+    LocationCache.generateLocations(10);
 
   }
 
