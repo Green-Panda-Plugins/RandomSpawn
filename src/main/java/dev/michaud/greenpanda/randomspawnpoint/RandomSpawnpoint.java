@@ -60,8 +60,8 @@ public final class RandomSpawnpoint extends JavaPlugin {
     config.options().copyDefaults(true);
     saveDefaultConfig();
 
-    spawnRadius = config.getInt("SpawnDistance");
-    setPlayerCompassLocation = config.getBoolean("SetPlayerCompassLocation");
+    spawnRadius = config.getInt("SpawnDistance", 5000);
+    setPlayerCompassLocation = config.getBoolean("SetPlayerCompassLocation", true);
     blockBlacklist = new HashSet<>();
     config.getStringList("BlockBlacklist").forEach(e -> blockBlacklist.add(Material.valueOf(e)));
     defaultWorld = getWorldFromConfig();

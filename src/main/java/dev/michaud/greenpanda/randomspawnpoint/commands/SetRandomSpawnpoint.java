@@ -1,5 +1,6 @@
 package dev.michaud.greenpanda.randomspawnpoint.commands;
 
+import dev.michaud.greenpanda.randomspawnpoint.util.SetPlayerCompass;
 import dev.michaud.greenpanda.randomspawnpoint.util.SetSpawn;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -37,6 +38,7 @@ public class SetRandomSpawnpoint implements CommandExecutor {
 
     player.sendMessage(Component.text("Set your spawn point to " + x + ", " + y + ", " + z));
     player.teleport(location, TeleportCause.COMMAND);
+    SetPlayerCompass.setPlayerCompassLocation(player);
 
     return true;
   }
