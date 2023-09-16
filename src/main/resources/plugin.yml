@@ -8,7 +8,13 @@ commands:
   setrandomspawnpoint:
     description: Sets your spawnpoint to a random location.
     permission: randomspawnpoint.setspawn
+  asynctest:
+    description: Sets your spawnpoint to a random location asynchronously.
+    permission: randomspawnpoint.asynctest
 permissions:
   randomspawnpoint.setspawn:
     description: Lets you set your spawnpoint to a random location.
+    default: op
+  randomspawnpoint.asynctest:
+    description: Lets you spawnpoint to a random location asynchronously.
     default: op

@@ -20,7 +20,7 @@ public class SetSpawn {
 
   /**
    * Sets the player's spawn point to a random position. The location must be safe as defined by
-   * {@link SetSpawn#getSafeLocation(World)}. If after 100 tries no suitable location is found, the
+   * {@link SetSpawn#getSafeLocation(World)}.
    *
    * @param world  the world to set the player's spawnpoint in.
    * @param player the player to set the spawnpoint for.
